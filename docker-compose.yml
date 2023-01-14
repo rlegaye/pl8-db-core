@@ -1,0 +1,10 @@
+version: "3"
+services:
+  mysql:
+    container_name: pl8_db
+    # platform: linux/x86_64
+    image: mysql:5.7
+    env_file:
+      - ./docker_images/mysql/mysql.env
+    ports:
+      - "3311:3306"
